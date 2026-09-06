@@ -13,10 +13,10 @@ const pillars = [
   },
 ];
 
-const frameA =
-  "https://res.cloudinary.com/iqlvzhdw/video/upload/so_1.1,w_900,h_1120,c_fill,g_auto,q_auto,f_auto/v1788725634/hero-approved-desktop.jpg";
-const frameB =
-  "https://res.cloudinary.com/iqlvzhdw/video/upload/so_4.7,w_720,h_720,c_fill,g_auto,q_auto,f_auto/v1788725634/hero-approved-desktop.jpg";
+const primaryImage =
+  "https://images.pexels.com/photos/6209554/pexels-photo-6209554.jpeg?auto=compress&cs=tinysrgb&w=1400";
+const secondaryImage =
+  "https://images.pexels.com/photos/34721280/pexels-photo-34721280.jpeg?auto=compress&cs=tinysrgb&w=1000";
 
 export function WhoWeAre() {
   return (
@@ -26,7 +26,7 @@ export function WhoWeAre() {
       aria-labelledby="instituto-title"
     >
       <div className="mx-auto max-w-[1440px] px-6 py-20 sm:py-24 lg:px-10 lg:py-28 xl:px-14 xl:py-32">
-        <div className="grid items-center gap-14 lg:grid-cols-[0.94fr_1.06fr] lg:gap-16 xl:gap-24">
+        <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 xl:gap-24">
           <div className="relative z-10 max-w-[650px]">
             <div className="mb-6 flex items-center gap-4">
               <span className="h-[2px] w-10 bg-[var(--fontes-blue)] sm:w-12" aria-hidden="true" />
@@ -56,38 +56,42 @@ export function WhoWeAre() {
             </p>
           </div>
 
-          <div className="relative min-h-[500px] sm:min-h-[590px] lg:min-h-[650px]" aria-hidden="true">
-            <div className="absolute left-[3%] top-[5%] h-[76%] w-[63%] overflow-hidden rounded-[46%_46%_16%_16%/34%_34%_12%_12%] bg-[var(--fontes-blue)]">
+          <div className="relative min-h-[520px] sm:min-h-[610px] lg:min-h-[680px]" aria-hidden="true">
+            <div className="absolute left-[2%] top-[2%] h-[76%] w-[66%] overflow-hidden rounded-[2.4rem] bg-[var(--fontes-navy)] shadow-[0_28px_90px_rgba(15,45,91,0.12)]">
               <img
-                src={frameA}
+                src={primaryImage}
                 alt=""
-                className="h-full w-full object-cover saturate-[0.92]"
+                className="h-full w-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-[var(--fontes-blue)]/24 mix-blend-color" />
             </div>
 
-            <div className="absolute right-[2%] top-[14%] h-[190px] w-[190px] rounded-full bg-[var(--fontes-yellow)] sm:h-[225px] sm:w-[225px] lg:h-[245px] lg:w-[245px]" />
+            <div className="absolute right-[0%] top-[9%] h-[235px] w-[235px] rounded-full bg-[var(--fontes-yellow)] sm:h-[275px] sm:w-[275px] lg:h-[300px] lg:w-[300px]" />
 
-            <div className="absolute bottom-[4%] right-[2%] h-[43%] w-[44%] overflow-hidden rounded-full border-[10px] border-[var(--fontes-off-white)] bg-[var(--fontes-navy)] shadow-[0_22px_70px_rgba(15,45,91,0.12)]">
-              <img src={frameB} alt="" className="h-full w-full object-cover" />
+            <div className="absolute bottom-[2%] right-[1%] h-[46%] w-[47%] overflow-hidden rounded-[2rem] border-[10px] border-[var(--fontes-off-white)] bg-[var(--fontes-blue)] shadow-[0_24px_80px_rgba(15,45,91,0.16)]">
+              <img
+                src={secondaryImage}
+                alt=""
+                className="h-full w-full object-cover grayscale contrast-[1.08]"
+              />
+              <div className="absolute inset-0 bg-[var(--fontes-blue)] mix-blend-color" />
               <div className="absolute inset-0 bg-[var(--fontes-navy)]/12 mix-blend-multiply" />
             </div>
 
-            <div className="absolute left-[-3%] top-[57%] z-20 w-[72%]">
+            <div className="absolute left-[-2%] top-[57%] z-20 w-[70%]">
               <svg viewBox="0 0 520 150" className="h-auto w-full" fill="none">
                 <path d="M0 82C84 14 131 132 224 65C310 2 371 115 520 34" stroke="var(--fontes-blue)" strokeWidth="7" strokeLinecap="round" />
                 <path d="M0 108C84 40 131 158 224 91C310 28 371 141 520 60" stroke="#74BCFF" strokeWidth="4" strokeLinecap="round" />
-                <path d="M0 132C84 64 131 182 224 115C310 52 371 165 520 84" stroke="var(--fontes-blue)" strokeOpacity="0.32" strokeWidth="3" strokeLinecap="round" />
+                <path d="M0 132C84 64 131 182 224 115C310 52 371 165 520 84" stroke="var(--fontes-blue)" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round" />
               </svg>
             </div>
 
-            <div className="absolute right-[1%] top-[3%] text-right text-[10px] font-semibold uppercase leading-5 tracking-[0.27em] text-[var(--fontes-navy)]/48 sm:text-xs sm:leading-6">
+            <div className="absolute right-[2%] top-[3%] z-20 text-right text-[10px] font-semibold uppercase leading-5 tracking-[0.27em] text-[var(--fontes-navy)]/48 sm:text-xs sm:leading-6">
               Mais pessoas
               <br />
               mais horizontes
             </div>
 
-            <div className="absolute bottom-[7%] left-[8%] z-30 bg-[var(--fontes-off-white)]/94 px-4 py-3 backdrop-blur-sm">
+            <div className="absolute bottom-[6%] left-[7%] z-30 max-w-[280px] bg-white/94 px-5 py-4 backdrop-blur-sm">
               <p className="text-[10px] font-semibold uppercase leading-5 tracking-[0.26em] text-[var(--fontes-blue)] sm:text-xs">
                 Educação que abre caminhos
               </p>
