@@ -61,6 +61,7 @@ export function FeaturedTerritorySection() {
               preserveAspectRatio="xMidYMid meet"
             >
               <path
+                className="fontes-line-flow"
                 d="M8 468C128 385 192 514 315 414C435 316 504 164 712 134"
                 stroke="#007BFF"
                 strokeWidth="10"
@@ -82,9 +83,9 @@ export function FeaturedTerritorySection() {
               />
             </svg>
 
-            <div className="absolute left-[4%] top-[52%] h-24 w-24 rounded-full border border-white/16 bg-white/[0.03] sm:h-28 sm:w-28 lg:h-32 lg:w-32" />
-            <div className="absolute left-[39%] top-[42%] h-32 w-32 rounded-full bg-[var(--fontes-blue)] sm:h-36 sm:w-36 lg:h-40 lg:w-40" />
-            <div className="absolute right-[2%] top-[13%] h-40 w-40 rounded-full bg-[var(--fontes-yellow)] sm:h-48 sm:w-48 lg:h-52 lg:w-52" />
+            <div className="fontes-float absolute left-[4%] top-[52%] h-24 w-24 rounded-full border border-white/16 bg-white/[0.03] sm:h-28 sm:w-28 lg:h-32 lg:w-32" />
+            <div className="fontes-breathe absolute left-[39%] top-[42%] h-32 w-32 rounded-full bg-[var(--fontes-blue)] sm:h-36 sm:w-36 lg:h-40 lg:w-40" />
+            <div className="fontes-float absolute right-[2%] top-[13%] h-40 w-40 rounded-full bg-[var(--fontes-yellow)] sm:h-48 sm:w-48 lg:h-52 lg:w-52" />
 
             <div className="absolute left-[6%] top-[58%] z-10 text-center">
               <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-white/45 sm:text-xs">
