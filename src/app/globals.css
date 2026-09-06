@@ -31,14 +31,12 @@ a {
   text-decoration: none;
 }
 
-.hero-viewport {
-  min-height: auto;
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-@media (min-width: 1024px) {
-  .hero-viewport {
-    height: calc(100svh - 88px);
-    min-height: 540px;
-    max-height: 860px;
+  .hero-video {
+    display: none;
   }
 }
