@@ -1,5 +1,6 @@
 import { HomeHero } from "@/components/home/HomeHero";
 import { ImpactSection } from "@/components/home/ImpactSection";
+import { TerritoriesSection } from "@/components/home/TerritoriesSection";
 import { WhoWeAre } from "@/components/home/WhoWeAre";
 import { SiteHeader } from "@/components/site/SiteHeader";
 
@@ -10,6 +11,7 @@ export default function HomePage() {
       <HomeHero />
       <WhoWeAre />
       <ImpactSection />
+      <TerritoriesSection />
     </main>
   );
 }
