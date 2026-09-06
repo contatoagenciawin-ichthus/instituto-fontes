@@ -10,7 +10,7 @@ const mosaicImages = {
 export function VisualMosaicSection() {
   return (
     <section className="relative overflow-hidden bg-[var(--fontes-off-white)]">
-      <div className="mx-auto max-w-[1440px] px-6 pb-24 sm:pb-28 lg:px-10 lg:pb-32 xl:px-14 xl:pb-36">
+      <div className="mx-auto max-w-[1440px] px-6 pb-20 sm:pb-24 lg:px-10 lg:pb-28 xl:px-14 xl:pb-32">
         <div className="mb-8 flex items-end justify-between gap-8 sm:mb-10">
           <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[var(--fontes-blue)] sm:text-xs">
             Pessoas · caminhos · futuro
@@ -29,8 +29,8 @@ export function VisualMosaicSection() {
             aria-hidden="true"
           />
 
-          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-12 lg:grid-rows-[245px_245px_245px]">
-            <div className="fontes-shimmer relative min-h-[430px] overflow-hidden bg-[var(--fontes-navy)] sm:col-span-2 lg:col-span-6 lg:row-span-2 lg:min-h-0">
+          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-12 lg:grid-rows-[215px_215px_215px]">
+            <div className="fontes-shimmer fontes-mosaic-lead relative min-h-[400px] overflow-hidden bg-[var(--fontes-navy)] sm:col-span-2 lg:col-span-6 lg:row-span-2 lg:min-h-0">
               <img src={mosaicImages.photography} alt="" className="fontes-image-breathe absolute inset-0 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--fontes-navy)]/92 via-[var(--fontes-navy)]/10 to-transparent" />
               <div className="absolute left-7 top-7 text-[10px] font-semibold uppercase leading-5 tracking-[0.28em] text-white/72 sm:left-9 sm:top-9 sm:text-xs">
