@@ -4,125 +4,52 @@ const territories = [
     title: "Formação profissional e empreendedorismo",
     description: "Habilidades hoje, mais oportunidades amanhã.",
     examples: ["Barbearia", "Manicure", "Cabeleireiro", "Maquiagem", "Moda", "Marketing digital", "Hardware"],
-    tone: "bg-[#EEF7FF]",
-    accent: "blue",
-    icon: "briefcase",
+    image: "https://images.pexels.com/photos/3846554/pexels-photo-3846554.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    layout: "lg:col-span-7",
+    treatment: "natural",
   },
   {
     number: "02",
     title: "Educação e tecnologia",
     description: "Conhecimento que transforma realidades.",
     examples: ["Reforço escolar", "Leitura e escrita", "Inglês", "Fotografia", "Informática"],
-    tone: "bg-[#F7FBFF]",
-    accent: "blue",
-    icon: "education",
+    image: "https://images.pexels.com/photos/5211441/pexels-photo-5211441.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    layout: "lg:col-span-5",
+    treatment: "duotone",
   },
   {
     number: "03",
     title: "Arte e cultura",
     description: "Expressão que conecta pessoas.",
     examples: ["Teatro", "Desenho", "Música", "Violão", "Teclado", "Ballet", "Jazz"],
-    tone: "bg-[#FFF8E8]",
-    accent: "yellow",
-    icon: "art",
+    image: "https://images.pexels.com/photos/8382271/pexels-photo-8382271.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    layout: "lg:col-span-4",
+    treatment: "natural",
   },
   {
     number: "04",
     title: "Esporte",
     description: "Disciplina que impulsiona vidas.",
     examples: ["Jiu-jitsu", "Muay Thai", "Vôlei"],
-    tone: "bg-[#EEF7FF]",
-    accent: "blue",
-    icon: "sport",
+    image: "https://images.pexels.com/photos/19180857/pexels-photo-19180857.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    layout: "lg:col-span-4",
+    treatment: "duotone",
   },
   {
     number: "05",
     title: "Formação humana e espiritual",
     description: "Valores que sustentam o futuro.",
     examples: ["Estudo bíblico", "Acompanhamento", "Convivência", "Desenvolvimento humano"],
-    tone: "bg-[#FFF8E8]",
-    accent: "yellow",
-    icon: "people",
+    image: "https://images.pexels.com/photos/34623518/pexels-photo-34623518.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    layout: "lg:col-span-4",
+    treatment: "natural",
   },
 ] as const;
-
-const territoryFrameA =
-  "https://res.cloudinary.com/iqlvzhdw/video/upload/so_2.8,w_1100,h_720,c_fill,g_auto,q_auto,f_auto/v1788725634/hero-approved-desktop.jpg";
-const territoryFrameB =
-  "https://res.cloudinary.com/iqlvzhdw/video/upload/so_7.4,w_1000,h_720,c_fill,g_auto,q_auto,f_auto/v1788725634/hero-approved-desktop.jpg";
-
-function TerritoryIcon({ icon, accent }: { icon: string; accent: "blue" | "yellow" }) {
-  const stroke = accent === "yellow" ? "#A45113" : "#0F2D5B";
-  const common = {
-    width: 56,
-    height: 56,
-    viewBox: "0 0 56 56",
-    fill: "none",
-    xmlns: "http://www.w3.org/2000/svg",
-    stroke,
-    strokeWidth: 2.4,
-    strokeLinecap: "round" as const,
-    strokeLinejoin: "round" as const,
-  };
-
-  if (icon === "briefcase") {
-    return (
-      <svg {...common} aria-hidden="true">
-        <path d="M13 20.5h30a3 3 0 0 1 3 3v19a3 3 0 0 1-3 3H13a3 3 0 0 1-3-3v-19a3 3 0 0 1 3-3Z" />
-        <path d="M21 20.5v-4.3a3.2 3.2 0 0 1 3.2-3.2h7.6a3.2 3.2 0 0 1 3.2 3.2v4.3" />
-        <path d="M10 29.5c8.4 4.8 27.6 4.8 36 0" />
-        <path d="M25 31.5h6" />
-      </svg>
-    );
-  }
-
-  if (icon === "education") {
-    return (
-      <svg {...common} aria-hidden="true">
-        <path d="m7 23 21-11 21 11-21 11L7 23Z" />
-        <path d="M15 27v10.5c4.6 4.6 8.9 6.5 13 6.5s8.4-1.9 13-6.5V27" />
-        <path d="M49 23v12" />
-      </svg>
-    );
-  }
-
-  if (icon === "art") {
-    return (
-      <svg {...common} aria-hidden="true">
-        <path d="M28 9c-11.1 0-20 8.1-20 18.1C8 37 16.8 45 27.7 45H31c3 0 4.7-3.4 2.9-5.8l-1.1-1.4c-1.8-2.3-.2-5.7 2.8-5.7H40c5.4 0 8-3.9 8-8.2C48 15.6 39.2 9 28 9Z" />
-        <circle cx="19" cy="22" r="2" />
-        <circle cx="28" cy="17" r="2" />
-        <circle cx="37" cy="21" r="2" />
-        <circle cx="19" cy="31" r="2" />
-      </svg>
-    );
-  }
-
-  if (icon === "sport") {
-    return (
-      <svg {...common} aria-hidden="true">
-        <circle cx="28" cy="28" r="19" />
-        <path d="m28 18 7 5-2.5 8h-9L21 23l7-5Z" />
-        <path d="m28 9 0 9M10.5 21.5 21 23M45.5 21.5 35 23M15.5 42 23.5 31M40.5 42 32.5 31" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg {...common} aria-hidden="true">
-      <circle cx="28" cy="18" r="6" />
-      <circle cx="15" cy="23" r="4.5" />
-      <circle cx="41" cy="23" r="4.5" />
-      <path d="M17 45v-9c0-6 4.9-10.8 11-10.8S39 30 39 36v9" />
-      <path d="M7.5 45v-7.2c0-4.7 3.6-8.5 8-8.5 1.7 0 3.2.5 4.5 1.4M48.5 45v-7.2c0-4.7-3.6-8.5-8-8.5-1.7 0-3.2.5-4.5 1.4" />
-    </svg>
-  );
-}
 
 export function TerritoriesSection() {
   return (
     <section id="territorios" className="relative overflow-hidden bg-white" aria-labelledby="territorios-title">
-      <div className="mx-auto max-w-[1440px] px-6 pt-24 sm:pt-28 lg:px-10 lg:pt-32 xl:px-14 xl:pt-36">
+      <div className="mx-auto max-w-[1440px] px-6 py-24 sm:py-28 lg:px-10 lg:py-32 xl:px-14 xl:py-36">
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-16 xl:gap-24">
           <div>
             <div className="mb-5 flex items-center gap-4">
@@ -138,113 +65,86 @@ export function TerritoriesSection() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 pb-2 text-[10px] font-semibold uppercase leading-5 tracking-[0.28em] text-[var(--fontes-navy)]/48 sm:text-xs sm:leading-6">
-            <p>Conhecimento<br />oportunidades<br />comunidade<br />transformação</p>
-            <p>Pessoas<br />que fazem<br />novos caminhos<br />sempre</p>
-          </div>
-        </div>
-
-        <p className="mt-7 max-w-[760px] text-xs font-semibold uppercase tracking-[0.28em] text-[var(--fontes-navy)]/58 sm:text-sm">
-          Diferentes caminhos. Pessoas em movimento para mais futuro.
-        </p>
-
-        <div className="mt-14 grid gap-4 lg:grid-cols-12 lg:grid-rows-[310px] sm:mt-16">
-          <div className="relative min-h-[280px] overflow-hidden rounded-[1.8rem] bg-[var(--fontes-navy)] lg:col-span-5 lg:min-h-0">
-            <img src={territoryFrameA} alt="" className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-[var(--fontes-blue)]/28 mix-blend-color" />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--fontes-navy)]/78 to-transparent px-7 pb-7 pt-20">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-white/72">Pessoas em movimento</p>
-              <p className="mt-2 text-2xl font-semibold tracking-[-0.035em] text-white sm:text-3xl" style={{ fontFamily: "var(--font-sora)" }}>
-                Potencial em ação.
-              </p>
-            </div>
-          </div>
-
-          <div className="relative min-h-[220px] overflow-hidden rounded-[1.8rem] bg-[var(--fontes-blue)] p-7 lg:col-span-3 lg:min-h-0 sm:p-8">
-            <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full border-[18px] border-white/12" aria-hidden="true" />
-            <p className="text-[10px] font-semibold uppercase tracking-[0.27em] text-white/66">Instituto Fontes</p>
-            <p
-              className="absolute bottom-7 left-7 max-w-[260px] text-[clamp(2rem,3vw,3.5rem)] font-bold leading-[0.94] tracking-[-0.05em] text-white sm:bottom-8 sm:left-8"
-              style={{ fontFamily: "var(--font-sora)" }}
-            >
-              Educação que abre caminhos.
+          <div className="max-w-[520px] lg:justify-self-end">
+            <p className="text-lg leading-8 text-[var(--fontes-black)]/68 sm:text-xl sm:leading-9">
+              Formação profissional, educação, arte, esporte e desenvolvimento humano se encontram para ampliar repertório, autonomia e futuro.
             </p>
           </div>
-
-          <div className="relative min-h-[280px] overflow-hidden rounded-[1.8rem] bg-[#EEF7FF] lg:col-span-4 lg:min-h-0">
-            <img src={territoryFrameB} alt="" className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-[var(--fontes-navy)]/12 mix-blend-multiply" />
-            <div className="absolute -bottom-10 -left-8 h-36 w-36 rounded-full bg-[var(--fontes-yellow)]/92" aria-hidden="true" />
-            <div className="absolute right-6 top-6 text-right text-[10px] font-semibold uppercase leading-5 tracking-[0.25em] text-white drop-shadow-sm">
-              Mais pessoas<br />mais horizontes
-            </div>
-          </div>
         </div>
-      </div>
 
-      <div className="mx-auto mt-14 max-w-[1440px] px-0 sm:mt-16 lg:px-10 xl:px-14">
-        <div className="grid border-y border-[var(--fontes-navy)]/10 md:grid-cols-2 lg:grid-cols-5">
-          {territories.map((territory, index) => {
-            const iconBg = territory.accent === "yellow" ? "bg-[#FFD77A]" : "bg-[#CDEBFF]";
-            const lineColor = territory.accent === "yellow" ? "bg-[var(--fontes-yellow)]" : "bg-[var(--fontes-blue)]";
+        <div className="mt-14 grid gap-4 sm:mt-16 lg:grid-cols-12">
+          {territories.map((territory, index) => (
+            <article
+              key={territory.title}
+              className={`group relative min-h-[520px] overflow-hidden rounded-[2rem] bg-[var(--fontes-navy)] ${territory.layout}`}
+            >
+              <img
+                src={territory.image}
+                alt=""
+                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025] ${
+                  territory.treatment === "duotone" ? "grayscale contrast-[1.08]" : ""
+                }`}
+              />
 
-            return (
-              <article
-                key={territory.title}
-                className={`relative min-h-[620px] overflow-hidden px-7 py-8 text-center sm:min-h-[650px] sm:px-8 sm:py-10 lg:min-h-[680px] lg:px-5 xl:px-7 ${territory.tone} ${
-                  index > 0 ? "border-t border-[var(--fontes-navy)]/8 md:border-l md:border-t-0" : ""
-                } ${index === 2 ? "md:border-t md:border-[var(--fontes-navy)]/8 lg:border-t-0" : ""} ${index === 4 ? "md:col-span-2 lg:col-span-1" : ""}`}
-              >
-                <div className="relative z-10 mx-auto flex h-full max-w-[260px] flex-col items-center">
-                  <div className={`flex h-24 w-24 items-center justify-center rounded-full ${iconBg}`}>
-                    <TerritoryIcon icon={territory.icon} accent={territory.accent} />
-                  </div>
-                  <p className="mt-5 text-[10px] font-semibold tracking-[0.24em] text-[var(--fontes-blue)]">{territory.number}</p>
-                  <h3
-                    className="mt-4 text-[clamp(1.4rem,1.9vw,2rem)] font-semibold leading-[1.02] tracking-[-0.045em] text-[var(--fontes-navy)]"
-                    style={{ fontFamily: "var(--font-sora)" }}
-                  >
-                    {territory.title}
-                  </h3>
-                  <span className={`mt-5 h-[2px] w-8 ${lineColor}`} aria-hidden="true" />
-                  <p className="mt-5 max-w-[220px] text-[0.96rem] leading-6 text-[var(--fontes-navy)]/72">{territory.description}</p>
-                  <ul className="mt-7 space-y-1.5 text-[10px] font-semibold uppercase leading-4 tracking-[0.23em] text-[var(--fontes-navy)]/68 sm:text-[11px]">
-                    {territory.examples.map((example) => <li key={example}>{example}</li>)}
-                  </ul>
-                  <div className="mt-auto w-full pt-10" aria-hidden="true">
-                    <div className="relative mx-auto h-36 w-full max-w-[250px]">
-                      {territory.accent === "yellow" ? (
-                        <>
-                          <div className="absolute -bottom-20 left-1/2 h-48 w-48 -translate-x-1/2 rounded-full bg-[var(--fontes-yellow)]/72" />
-                          <div className="absolute bottom-7 left-[-18%] h-28 w-[136%] rounded-[50%] border-[4px] border-[var(--fontes-yellow)]" />
-                          <div className="absolute bottom-1 left-[-8%] h-24 w-[116%] rounded-[50%] border-[3px] border-[var(--fontes-yellow)]/70" />
-                        </>
-                      ) : index === 3 ? (
-                        <>
-                          <div className="absolute -bottom-24 left-1/2 h-52 w-52 -translate-x-1/2 rounded-full bg-[var(--fontes-blue)]" />
-                          <div className="absolute -top-4 left-1/2 h-32 w-32 -translate-x-1/2 rounded-full border-[6px] border-[var(--fontes-blue)]" />
-                          <div className="absolute top-2 left-1/2 h-24 w-24 -translate-x-1/2 rounded-full border-[4px] border-[#74BCFF]" />
-                        </>
-                      ) : (
-                        <>
-                          <div className="absolute -bottom-24 left-1/2 h-52 w-52 -translate-x-1/2 rounded-full bg-[var(--fontes-blue)]/85" />
-                          <div className="absolute bottom-8 left-[-22%] h-28 w-[144%] rounded-[50%] border-[4px] border-[var(--fontes-blue)]" />
-                          <div className="absolute bottom-1 left-[-12%] h-24 w-[124%] rounded-[50%] border-[3px] border-[#74BCFF]" />
-                        </>
-                      )}
-                    </div>
-                  </div>
+              {territory.treatment === "duotone" ? (
+                <>
+                  <div className="absolute inset-0 bg-[var(--fontes-blue)] mix-blend-color" />
+                  <div className="absolute inset-0 bg-[var(--fontes-navy)]/24 mix-blend-multiply" />
+                </>
+              ) : (
+                <div className="absolute inset-0 bg-[var(--fontes-navy)]/10" />
+              )}
+
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--fontes-navy)] via-[var(--fontes-navy)]/18 to-transparent" />
+
+              <div className="absolute left-6 top-6 flex items-center gap-3 sm:left-8 sm:top-8">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xs font-semibold tracking-[0.18em] text-[var(--fontes-blue)]">
+                  {territory.number}
+                </span>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/76 sm:text-xs">
+                  Território Fontes
+                </span>
+              </div>
+
+              {index === 0 ? (
+                <div className="absolute right-[-46px] top-[12%] h-40 w-40 rounded-full bg-[var(--fontes-yellow)] sm:h-48 sm:w-48" aria-hidden="true" />
+              ) : null}
+
+              {index === 2 ? (
+                <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full border-[16px] border-[var(--fontes-yellow)]/85" aria-hidden="true" />
+              ) : null}
+
+              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-9">
+                <h3
+                  className="max-w-[620px] text-[clamp(2rem,3.6vw,4rem)] font-bold leading-[0.95] tracking-[-0.05em] text-white"
+                  style={{ fontFamily: "var(--font-sora)" }}
+                >
+                  {territory.title}
+                </h3>
+                <p className="mt-4 max-w-[500px] text-base leading-7 text-white/78 sm:text-lg">
+                  {territory.description}
+                </p>
+                <div className="mt-6 flex max-w-[760px] flex-wrap gap-x-4 gap-y-2 border-t border-white/22 pt-5">
+                  {territory.examples.map((example) => (
+                    <span key={example} className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/72 sm:text-[11px]">
+                      {example}
+                    </span>
+                  ))}
                 </div>
-              </article>
-            );
-          })}
+              </div>
+            </article>
+          ))}
         </div>
-      </div>
 
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-8 px-6 py-8 lg:px-10 xl:px-14">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[var(--fontes-navy)]/44 sm:text-xs">Instituto Fontes · Pessoas em movimento</p>
-        <div className="hidden h-px flex-1 bg-[var(--fontes-navy)]/12 sm:block" aria-hidden="true" />
-        <p className="hidden text-[10px] font-semibold uppercase tracking-[0.26em] text-[var(--fontes-blue)] sm:block sm:text-xs">Educação que abre caminhos</p>
+        <div className="mt-8 flex items-center justify-between gap-8">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[var(--fontes-navy)]/44 sm:text-xs">
+            Pessoas em movimento · diferentes formas de aprender e crescer
+          </p>
+          <div className="hidden h-px flex-1 bg-[var(--fontes-navy)]/12 sm:block" aria-hidden="true" />
+          <p className="hidden text-[10px] font-semibold uppercase tracking-[0.26em] text-[var(--fontes-blue)] lg:block lg:text-xs">
+            Educação que abre caminhos
+          </p>
+        </div>
       </div>
     </section>
   );
