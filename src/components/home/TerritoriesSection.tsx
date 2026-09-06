@@ -4,7 +4,7 @@ const territories = [
     title: "Formação profissional e empreendedorismo",
     description: "Habilidades hoje, mais oportunidades amanhã.",
     examples: ["Barbearia", "Manicure", "Cabeleireiro", "Maquiagem", "Moda", "Marketing digital", "Hardware"],
-    image: "https://images.pexels.com/photos/3846554/pexels-photo-3846554.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    image: "https://images.pexels.com/photos/20853652/pexels-photo-20853652.jpeg?auto=compress&cs=tinysrgb&w=1400",
     tone: "blue",
   },
   {
@@ -12,7 +12,7 @@ const territories = [
     title: "Educação e tecnologia",
     description: "Conhecimento que transforma realidades.",
     examples: ["Reforço escolar", "Leitura e escrita", "Inglês", "Fotografia", "Informática"],
-    image: "https://images.pexels.com/photos/5211441/pexels-photo-5211441.jpeg?auto=compress&cs=tinysrgb&w=1400",
+    image: "https://images.pexels.com/photos/12197311/pexels-photo-12197311.jpeg?auto=compress&cs=tinysrgb&w=1400",
     tone: "light",
   },
   {
