@@ -1,4 +1,5 @@
 import { HomeHero } from "@/components/home/HomeHero";
+import { ImpactSection } from "@/components/home/ImpactSection";
 import { WhoWeAre } from "@/components/home/WhoWeAre";
 import { SiteHeader } from "@/components/site/SiteHeader";
 
@@ -8,6 +9,7 @@ export default function HomePage() {
       <SiteHeader />
       <HomeHero />
       <WhoWeAre />
+      <ImpactSection />
     </main>
   );
 }
