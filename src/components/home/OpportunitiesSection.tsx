@@ -1,5 +1,3 @@
-const opportunityImage =
-  "https://images.pexels.com/photos/29461098/pexels-photo-29461098.jpeg?auto=compress&cs=tinysrgb&w=1500";
 const detailImage =
   "https://images.pexels.com/photos/5676666/pexels-photo-5676666.jpeg?auto=compress&cs=tinysrgb&w=1000";
 
@@ -43,8 +41,36 @@ export function OpportunitiesSection() {
 
         <div className="mt-16 grid gap-4 lg:grid-cols-12 lg:grid-rows-[290px_290px] sm:mt-20 lg:mt-24">
           <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] bg-[var(--fontes-navy)] lg:col-span-5 lg:row-span-2 lg:min-h-0">
-            <img src={opportunityImage} alt="" className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--fontes-navy)]/92 via-[var(--fontes-navy)]/16 to-transparent" />
+            <video
+              className="absolute inset-0 hidden h-full w-full object-cover md:block motion-reduce:hidden"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+              aria-hidden="true"
+            >
+              <source
+                src="/media/instituto_fontes_secao_intermediaria_02.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <video
+              className="absolute inset-0 h-full w-full object-cover md:hidden motion-reduce:hidden"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+              aria-hidden="true"
+            >
+              <source
+                src="/media/instituto_fontes_secao_mobile_02.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="absolute inset-0 bg-[var(--fontes-navy)]/10 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--fontes-navy)]/94 via-[var(--fontes-navy)]/10 to-transparent" />
             <div className="absolute left-7 top-7 rounded-full bg-[var(--fontes-yellow)] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--fontes-navy)] sm:left-9 sm:top-9 sm:text-xs">
               Potencial em movimento
             </div>
