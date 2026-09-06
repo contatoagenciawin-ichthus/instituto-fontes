@@ -10,7 +10,8 @@ const navItems = [
 
 export function SiteHeader() {
   return (
-    <header className="h-[88px] border-b border-black/5 bg-[var(--fontes-off-white)]">
+    <header className="relative z-50 h-[88px] border-b border-white/10 bg-[var(--fontes-navy)]">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[var(--fontes-blue)]/70 to-transparent" aria-hidden="true" />
       <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between px-6 lg:px-10 xl:px-14">
         <Link
           href="/"
@@ -18,24 +19,24 @@ export function SiteHeader() {
           className="flex h-full shrink-0 items-center"
         >
           <Image
-            src="/brand/logo-transparente.png"
+            src="/brand/logo-horizontal.png"
             alt="Instituto Fontes"
-            width={180}
-            height={180}
+            width={220}
+            height={82}
             priority
-            className="h-[62px] w-[62px] object-contain sm:h-[66px] sm:w-[66px]"
+            className="h-[54px] w-auto object-contain sm:h-[58px]"
           />
         </Link>
 
         <nav
-          className="hidden items-center gap-8 text-sm font-medium text-black/70 lg:flex"
+          className="hidden items-center gap-8 text-sm font-medium text-white/72 lg:flex"
           aria-label="Navegação principal"
         >
           {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="transition-colors hover:text-[var(--fontes-blue)]"
+              className="relative py-3 transition-colors after:absolute after:inset-x-0 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-[var(--fontes-blue)] after:transition-transform hover:text-white hover:after:scale-x-100"
             >
               {item.label}
             </Link>
@@ -44,7 +45,7 @@ export function SiteHeader() {
 
         <Link
           href="/#contribua"
-          className="inline-flex min-h-11 items-center justify-center rounded-full bg-[var(--fontes-blue)] px-5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--fontes-blue)]"
+          className="inline-flex min-h-11 items-center justify-center rounded-full bg-[var(--fontes-yellow)] px-5 text-sm font-semibold text-[var(--fontes-navy)] transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           Contribua
         </Link>
