@@ -67,6 +67,16 @@ a {
   animation: fontes-line-flow 11s linear infinite;
 }
 
+.fontes-impact-arc {
+  stroke-dasharray: 58 42;
+  animation: fontes-impact-arc 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  transform-origin: center;
+}
+
+.fontes-impact-pulse {
+  animation: fontes-impact-pulse 7s ease-in-out infinite;
+}
+
 .fontes-shimmer {
   position: relative;
   overflow: hidden;
@@ -120,6 +130,17 @@ a {
   to { stroke-dashoffset: -190; }
 }
 
+@keyframes fontes-impact-arc {
+  0%, 12% { stroke-dashoffset: 100; opacity: 0.22; }
+  42%, 70% { stroke-dashoffset: 18; opacity: 1; }
+  100% { stroke-dashoffset: -46; opacity: 0.28; }
+}
+
+@keyframes fontes-impact-pulse {
+  0%, 18%, 100% { transform: scale(0.72); opacity: 0.35; }
+  42%, 66% { transform: scale(1); opacity: 1; }
+}
+
 @keyframes fontes-shimmer {
   0%, 72% { transform: translateX(0) skewX(-18deg); opacity: 0; }
   76% { opacity: 1; }
@@ -149,6 +170,8 @@ a {
   .fontes-image-breathe,
   .fontes-route-dot,
   .fontes-line-flow,
+  .fontes-impact-arc,
+  .fontes-impact-pulse,
   .fontes-shimmer::after {
     animation: none !important;
     transform: none !important;
