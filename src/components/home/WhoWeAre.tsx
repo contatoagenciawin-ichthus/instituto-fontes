@@ -62,7 +62,7 @@ export function WhoWeAre() {
             <div className="fontes-breathe absolute right-[8%] top-[2%] h-[245px] w-[245px] rounded-full bg-[var(--fontes-yellow)] sm:h-[285px] sm:w-[285px] lg:h-[315px] lg:w-[315px]" />
             <div className="absolute left-[10%] top-[7%] h-[58%] w-[68%] rounded-full bg-[var(--fontes-blue)]" />
 
-            <div className="absolute left-[0%] top-[10%] h-[72%] w-[70%] overflow-hidden bg-[var(--fontes-navy)] shadow-[0_28px_90px_rgba(15,45,91,0.12)]">
+            <div className="fontes-human-cutout absolute left-[0%] top-[10%] h-[72%] w-[70%] overflow-hidden bg-[var(--fontes-navy)] shadow-[0_28px_90px_rgba(15,45,91,0.12)]">
               <img
                 src={primaryImage}
                 alt=""
@@ -70,7 +70,7 @@ export function WhoWeAre() {
               />
             </div>
 
-            <div className="absolute bottom-[0%] right-[0%] h-[43%] w-[46%] overflow-hidden border-[10px] border-[var(--fontes-off-white)] bg-[var(--fontes-blue)] shadow-[0_24px_80px_rgba(15,45,91,0.16)]">
+            <div className="fontes-human-cutout-secondary absolute bottom-[0%] right-[0%] h-[43%] w-[46%] overflow-hidden border-[10px] border-[var(--fontes-off-white)] bg-[var(--fontes-blue)] shadow-[0_24px_80px_rgba(15,45,91,0.16)]">
               <img
                 src={secondaryImage}
                 alt=""
