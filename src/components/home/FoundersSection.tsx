@@ -22,7 +22,7 @@ export function FoundersSection() {
       className="relative overflow-hidden bg-[var(--fontes-off-white)]"
       aria-labelledby="fundadores-title"
     >
-      <div className="mx-auto max-w-[1440px] px-6 py-24 sm:py-28 lg:px-10 lg:py-32 xl:px-14 xl:py-36">
+      <div className="mx-auto max-w-[1440px] px-6 py-20 sm:py-24 lg:px-10 lg:py-28 xl:px-14 xl:py-32">
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch lg:gap-20 xl:gap-28">
           <div className="flex flex-col justify-between">
             <div>
@@ -52,7 +52,7 @@ export function FoundersSection() {
             </div>
           </div>
 
-          <div className="relative min-h-[560px] overflow-hidden bg-[var(--fontes-navy)] sm:min-h-[620px] lg:min-h-[680px]">
+          <div className="relative min-h-[480px] overflow-hidden bg-[var(--fontes-navy)] sm:min-h-[520px] lg:min-h-[560px]">
             <div
               className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-[var(--fontes-blue)] sm:h-96 sm:w-96"
               aria-hidden="true"
@@ -79,7 +79,7 @@ export function FoundersSection() {
               />
             </div>
 
-            <div className="relative z-10 flex h-full min-h-[560px] flex-col justify-between p-7 sm:min-h-[620px] sm:p-10 lg:min-h-[680px] lg:p-12">
+            <div className="relative z-10 flex h-full min-h-[480px] flex-col justify-between p-7 sm:min-h-[520px] sm:p-10 lg:min-h-[560px] lg:p-12">
               <div className="flex items-start justify-between gap-8">
                 <p className="max-w-[180px] text-[10px] font-semibold uppercase leading-5 tracking-[0.26em] text-white/68 sm:text-xs sm:leading-6">
                   Fotografia real dos fundadores
@@ -102,7 +102,7 @@ export function FoundersSection() {
           </div>
         </div>
 
-        <div className="mt-14 grid border-y border-[var(--fontes-navy)]/10 sm:mt-16 md:grid-cols-3 lg:mt-20">
+        <div className="mt-10 grid border-y border-[var(--fontes-navy)]/10 sm:mt-12 md:grid-cols-3 lg:mt-14">
           {pendingItems.map((item, index) => (
             <div
               key={item.label}
