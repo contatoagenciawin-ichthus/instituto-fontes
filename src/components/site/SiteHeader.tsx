@@ -12,18 +12,25 @@ export function SiteHeader() {
   return (
     <header className="h-[88px] border-b border-black/5 bg-[var(--fontes-off-white)]">
       <div className="mx-auto flex h-full max-w-[1440px] items-center justify-between px-6 lg:px-10 xl:px-14">
-        <Link href="/" aria-label="Instituto Fontes — início" className="shrink-0">
+        <Link
+          href="/"
+          aria-label="Instituto Fontes — início"
+          className="flex h-full shrink-0 items-center"
+        >
           <Image
-            src="/brand/logo-horizontal.png"
+            src="/brand/logo-transparente.png"
             alt="Instituto Fontes"
-            width={220}
-            height={80}
+            width={180}
+            height={180}
             priority
-            className="h-auto w-[154px] sm:w-[170px] lg:w-[184px]"
+            className="h-[62px] w-[62px] object-contain sm:h-[66px] sm:w-[66px]"
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm font-medium text-black/70 lg:flex" aria-label="Navegação principal">
+        <nav
+          className="hidden items-center gap-8 text-sm font-medium text-black/70 lg:flex"
+          aria-label="Navegação principal"
+        >
           {navItems.map((item) => (
             <Link
               key={item.label}
