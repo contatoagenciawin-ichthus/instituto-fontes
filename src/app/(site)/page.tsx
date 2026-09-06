@@ -1,4 +1,5 @@
 import { FeaturedTerritorySection } from "@/components/home/FeaturedTerritorySection";
+import { FoundersSection } from "@/components/home/FoundersSection";
 import { HomeHero } from "@/components/home/HomeHero";
 import { ImpactSection } from "@/components/home/ImpactSection";
 import { MotionSection } from "@/components/home/MotionSection";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <TerritoriesSection />
       <FeaturedTerritorySection />
       <MotionSection />
+      <FoundersSection />
     </main>
   );
 }
