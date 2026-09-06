@@ -14,9 +14,9 @@ const pillars = [
 ];
 
 const primaryImage =
-  "https://images.pexels.com/photos/6209554/pexels-photo-6209554.jpeg?auto=compress&cs=tinysrgb&w=1400";
+  "https://images.pexels.com/photos/6209356/pexels-photo-6209356.jpeg?auto=compress&cs=tinysrgb&w=1400";
 const secondaryImage =
-  "https://images.pexels.com/photos/34721280/pexels-photo-34721280.jpeg?auto=compress&cs=tinysrgb&w=1000";
+  "https://images.pexels.com/photos/7742822/pexels-photo-7742822.jpeg?auto=compress&cs=tinysrgb&w=1000";
 
 export function WhoWeAre() {
   return (
