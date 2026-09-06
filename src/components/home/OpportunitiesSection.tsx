@@ -71,7 +71,7 @@ export function OpportunitiesSection() {
             <img
               src="/brand/pattern-pequeno.png"
               alt=""
-              className="fontes-wave-drift absolute -right-14 top-[9%] z-10 w-[330px] opacity-75"
+              className="fontes-wave-drift absolute -right-20 bottom-[8%] z-10 w-[300px] opacity-60 sm:-right-16 sm:w-[330px]"
               aria-hidden="true"
             />
 
