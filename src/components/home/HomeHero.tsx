@@ -45,7 +45,7 @@ export function HomeHero() {
           </div>
         </div>
 
-        <div className="relative hidden h-[calc(100%-40px)] min-h-[420px] self-stretch lg:block">
+        <div className="relative hidden h-full min-h-[420px] self-stretch lg:block">
           <div className="absolute inset-y-5 left-8 right-0 bg-[var(--fontes-blue)]" aria-hidden="true" />
 
           <div className="absolute inset-y-0 left-0 right-8 overflow-hidden bg-[var(--fontes-navy)]">
