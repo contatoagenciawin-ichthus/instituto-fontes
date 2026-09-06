@@ -3,15 +3,7 @@ const territories = [
     number: "01",
     title: "Formação profissional e empreendedorismo",
     description: "Habilidades hoje, mais oportunidades amanhã.",
-    examples: [
-      "Barbearia",
-      "Manicure",
-      "Cabeleireiro",
-      "Maquiagem",
-      "Moda",
-      "Marketing digital",
-      "Hardware",
-    ],
+    examples: ["Barbearia", "Manicure", "Cabeleireiro", "Maquiagem", "Moda", "Marketing digital", "Hardware"],
     tone: "bg-[#EEF7FF]",
     accent: "blue",
     icon: "briefcase",
@@ -20,13 +12,7 @@ const territories = [
     number: "02",
     title: "Educação e tecnologia",
     description: "Conhecimento que transforma realidades.",
-    examples: [
-      "Reforço escolar",
-      "Leitura e escrita",
-      "Inglês",
-      "Fotografia",
-      "Informática",
-    ],
+    examples: ["Reforço escolar", "Leitura e escrita", "Inglês", "Fotografia", "Informática"],
     tone: "bg-[#F7FBFF]",
     accent: "blue",
     icon: "education",
@@ -35,15 +21,7 @@ const territories = [
     number: "03",
     title: "Arte e cultura",
     description: "Expressão que conecta pessoas.",
-    examples: [
-      "Teatro",
-      "Desenho",
-      "Música",
-      "Violão",
-      "Teclado",
-      "Ballet",
-      "Jazz",
-    ],
+    examples: ["Teatro", "Desenho", "Música", "Violão", "Teclado", "Ballet", "Jazz"],
     tone: "bg-[#FFF8E8]",
     accent: "yellow",
     icon: "art",
@@ -61,21 +39,20 @@ const territories = [
     number: "05",
     title: "Formação humana e espiritual",
     description: "Valores que sustentam o futuro.",
-    examples: [
-      "Estudo bíblico",
-      "Acompanhamento",
-      "Convivência",
-      "Desenvolvimento humano",
-    ],
+    examples: ["Estudo bíblico", "Acompanhamento", "Convivência", "Desenvolvimento humano"],
     tone: "bg-[#FFF8E8]",
     accent: "yellow",
     icon: "people",
   },
 ] as const;
 
+const territoryFrameA =
+  "https://res.cloudinary.com/iqlvzhdw/video/upload/so_2.8,w_1100,h_720,c_fill,g_auto,q_auto,f_auto/v1788725634/hero-approved-desktop.jpg";
+const territoryFrameB =
+  "https://res.cloudinary.com/iqlvzhdw/video/upload/so_7.4,w_1000,h_720,c_fill,g_auto,q_auto,f_auto/v1788725634/hero-approved-desktop.jpg";
+
 function TerritoryIcon({ icon, accent }: { icon: string; accent: "blue" | "yellow" }) {
   const stroke = accent === "yellow" ? "#A45113" : "#0F2D5B";
-
   const common = {
     width: 56,
     height: 56,
@@ -144,21 +121,14 @@ function TerritoryIcon({ icon, accent }: { icon: string; accent: "blue" | "yello
 
 export function TerritoriesSection() {
   return (
-    <section
-      id="territorios"
-      className="relative overflow-hidden bg-white"
-      aria-labelledby="territorios-title"
-    >
+    <section id="territorios" className="relative overflow-hidden bg-white" aria-labelledby="territorios-title">
       <div className="mx-auto max-w-[1440px] px-6 pt-24 sm:pt-28 lg:px-10 lg:pt-32 xl:px-14 xl:pt-36">
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-16 xl:gap-24">
           <div>
             <div className="mb-5 flex items-center gap-4">
               <span className="h-[2px] w-10 bg-[var(--fontes-blue)] sm:w-12" aria-hidden="true" />
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--fontes-blue)] sm:text-sm">
-                Territórios Fontes
-              </p>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--fontes-blue)] sm:text-sm">Territórios Fontes</p>
             </div>
-
             <h2
               id="territorios-title"
               className="text-[clamp(3rem,5.5vw,6.2rem)] font-bold leading-[0.92] tracking-[-0.06em] text-[var(--fontes-navy)]"
@@ -169,79 +139,78 @@ export function TerritoriesSection() {
           </div>
 
           <div className="grid grid-cols-2 gap-8 pb-2 text-[10px] font-semibold uppercase leading-5 tracking-[0.28em] text-[var(--fontes-navy)]/48 sm:text-xs sm:leading-6">
-            <p>
-              Conhecimento
-              <br />
-              oportunidades
-              <br />
-              comunidade
-              <br />
-              transformação
-            </p>
-            <p>
-              Pessoas
-              <br />
-              que fazem
-              <br />
-              novos caminhos
-              <br />
-              sempre
-            </p>
+            <p>Conhecimento<br />oportunidades<br />comunidade<br />transformação</p>
+            <p>Pessoas<br />que fazem<br />novos caminhos<br />sempre</p>
           </div>
         </div>
 
         <p className="mt-7 max-w-[760px] text-xs font-semibold uppercase tracking-[0.28em] text-[var(--fontes-navy)]/58 sm:text-sm">
           Diferentes caminhos. Pessoas em movimento para mais futuro.
         </p>
+
+        <div className="mt-14 grid gap-4 lg:grid-cols-12 lg:grid-rows-[310px] sm:mt-16">
+          <div className="relative min-h-[280px] overflow-hidden rounded-[1.8rem] bg-[var(--fontes-navy)] lg:col-span-5 lg:min-h-0">
+            <img src={territoryFrameA} alt="" className="absolute inset-0 h-full w-full object-cover" />
+            <div className="absolute inset-0 bg-[var(--fontes-blue)]/28 mix-blend-color" />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--fontes-navy)]/78 to-transparent px-7 pb-7 pt-20">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-white/72">Pessoas em movimento</p>
+              <p className="mt-2 text-2xl font-semibold tracking-[-0.035em] text-white sm:text-3xl" style={{ fontFamily: "var(--font-sora)" }}>
+                Potencial em ação.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative min-h-[220px] overflow-hidden rounded-[1.8rem] bg-[var(--fontes-blue)] p-7 lg:col-span-3 lg:min-h-0 sm:p-8">
+            <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full border-[18px] border-white/12" aria-hidden="true" />
+            <p className="text-[10px] font-semibold uppercase tracking-[0.27em] text-white/66">Instituto Fontes</p>
+            <p
+              className="absolute bottom-7 left-7 max-w-[260px] text-[clamp(2rem,3vw,3.5rem)] font-bold leading-[0.94] tracking-[-0.05em] text-white sm:bottom-8 sm:left-8"
+              style={{ fontFamily: "var(--font-sora)" }}
+            >
+              Educação que abre caminhos.
+            </p>
+          </div>
+
+          <div className="relative min-h-[280px] overflow-hidden rounded-[1.8rem] bg-[#EEF7FF] lg:col-span-4 lg:min-h-0">
+            <img src={territoryFrameB} alt="" className="absolute inset-0 h-full w-full object-cover" />
+            <div className="absolute inset-0 bg-[var(--fontes-navy)]/12 mix-blend-multiply" />
+            <div className="absolute -bottom-10 -left-8 h-36 w-36 rounded-full bg-[var(--fontes-yellow)]/92" aria-hidden="true" />
+            <div className="absolute right-6 top-6 text-right text-[10px] font-semibold uppercase leading-5 tracking-[0.25em] text-white drop-shadow-sm">
+              Mais pessoas<br />mais horizontes
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="mx-auto mt-16 max-w-[1440px] px-0 sm:mt-20 lg:mt-24 lg:px-10 xl:px-14">
+      <div className="mx-auto mt-14 max-w-[1440px] px-0 sm:mt-16 lg:px-10 xl:px-14">
         <div className="grid border-y border-[var(--fontes-navy)]/10 md:grid-cols-2 lg:grid-cols-5">
           {territories.map((territory, index) => {
-            const iconBg =
-              territory.accent === "yellow" ? "bg-[#FFD77A]" : "bg-[#CDEBFF]";
-            const lineColor =
-              territory.accent === "yellow"
-                ? "bg-[var(--fontes-yellow)]"
-                : "bg-[var(--fontes-blue)]";
+            const iconBg = territory.accent === "yellow" ? "bg-[#FFD77A]" : "bg-[#CDEBFF]";
+            const lineColor = territory.accent === "yellow" ? "bg-[var(--fontes-yellow)]" : "bg-[var(--fontes-blue)]";
 
             return (
               <article
                 key={territory.title}
-                className={`relative min-h-[650px] overflow-hidden px-7 py-8 text-center sm:min-h-[680px] sm:px-8 sm:py-10 lg:min-h-[720px] lg:px-5 xl:px-7 ${territory.tone} ${
+                className={`relative min-h-[620px] overflow-hidden px-7 py-8 text-center sm:min-h-[650px] sm:px-8 sm:py-10 lg:min-h-[680px] lg:px-5 xl:px-7 ${territory.tone} ${
                   index > 0 ? "border-t border-[var(--fontes-navy)]/8 md:border-l md:border-t-0" : ""
-                } ${index === 2 ? "md:border-t md:border-[var(--fontes-navy)]/8 lg:border-t-0" : ""} ${
-                  index === 4 ? "md:col-span-2 lg:col-span-1" : ""
-                }`}
+                } ${index === 2 ? "md:border-t md:border-[var(--fontes-navy)]/8 lg:border-t-0" : ""} ${index === 4 ? "md:col-span-2 lg:col-span-1" : ""}`}
               >
                 <div className="relative z-10 mx-auto flex h-full max-w-[260px] flex-col items-center">
                   <div className={`flex h-24 w-24 items-center justify-center rounded-full ${iconBg}`}>
                     <TerritoryIcon icon={territory.icon} accent={territory.accent} />
                   </div>
-
-                  <p className="mt-5 text-[10px] font-semibold tracking-[0.24em] text-[var(--fontes-blue)]">
-                    {territory.number}
-                  </p>
-
+                  <p className="mt-5 text-[10px] font-semibold tracking-[0.24em] text-[var(--fontes-blue)]">{territory.number}</p>
                   <h3
                     className="mt-4 text-[clamp(1.4rem,1.9vw,2rem)] font-semibold leading-[1.02] tracking-[-0.045em] text-[var(--fontes-navy)]"
                     style={{ fontFamily: "var(--font-sora)" }}
                   >
                     {territory.title}
                   </h3>
-
                   <span className={`mt-5 h-[2px] w-8 ${lineColor}`} aria-hidden="true" />
-
-                  <p className="mt-5 max-w-[220px] text-[0.96rem] leading-6 text-[var(--fontes-navy)]/72">
-                    {territory.description}
-                  </p>
-
+                  <p className="mt-5 max-w-[220px] text-[0.96rem] leading-6 text-[var(--fontes-navy)]/72">{territory.description}</p>
                   <ul className="mt-7 space-y-1.5 text-[10px] font-semibold uppercase leading-4 tracking-[0.23em] text-[var(--fontes-navy)]/68 sm:text-[11px]">
-                    {territory.examples.map((example) => (
-                      <li key={example}>{example}</li>
-                    ))}
+                    {territory.examples.map((example) => <li key={example}>{example}</li>)}
                   </ul>
-
                   <div className="mt-auto w-full pt-10" aria-hidden="true">
                     <div className="relative mx-auto h-36 w-full max-w-[250px]">
                       {territory.accent === "yellow" ? (
@@ -273,13 +242,9 @@ export function TerritoriesSection() {
       </div>
 
       <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-8 px-6 py-8 lg:px-10 xl:px-14">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[var(--fontes-navy)]/44 sm:text-xs">
-          Instituto Fontes · Pessoas em movimento
-        </p>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[var(--fontes-navy)]/44 sm:text-xs">Instituto Fontes · Pessoas em movimento</p>
         <div className="hidden h-px flex-1 bg-[var(--fontes-navy)]/12 sm:block" aria-hidden="true" />
-        <p className="hidden text-[10px] font-semibold uppercase tracking-[0.26em] text-[var(--fontes-blue)] sm:block sm:text-xs">
-          Educação que abre caminhos
-        </p>
+        <p className="hidden text-[10px] font-semibold uppercase tracking-[0.26em] text-[var(--fontes-blue)] sm:block sm:text-xs">Educação que abre caminhos</p>
       </div>
     </section>
   );
