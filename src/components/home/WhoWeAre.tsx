@@ -25,8 +25,10 @@ export function WhoWeAre() {
       className="relative overflow-hidden bg-[var(--fontes-off-white)]"
       aria-labelledby="instituto-title"
     >
+      <div className="pointer-events-none absolute -right-20 top-16 h-56 w-56 rounded-full border-[24px] border-[var(--fontes-blue)]/8 sm:h-72 sm:w-72" aria-hidden="true" />
+
       <div className="mx-auto max-w-[1440px] px-6 py-20 sm:py-24 lg:px-10 lg:py-28 xl:px-14 xl:py-32">
-        <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 xl:gap-24">
+        <div className="grid items-center gap-14 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16 xl:gap-24">
           <div className="relative z-10 max-w-[650px]">
             <div className="mb-6 flex items-center gap-4">
               <span className="h-[2px] w-10 bg-[var(--fontes-blue)] sm:w-12" aria-hidden="true" />
@@ -56,18 +58,19 @@ export function WhoWeAre() {
             </p>
           </div>
 
-          <div className="relative min-h-[520px] sm:min-h-[610px] lg:min-h-[680px]" aria-hidden="true">
-            <div className="absolute left-[2%] top-[2%] h-[76%] w-[66%] overflow-hidden rounded-[2.4rem] bg-[var(--fontes-navy)] shadow-[0_28px_90px_rgba(15,45,91,0.12)]">
+          <div className="relative min-h-[500px] sm:min-h-[610px] lg:min-h-[690px]" aria-hidden="true">
+            <div className="fontes-breathe absolute right-[8%] top-[2%] h-[245px] w-[245px] rounded-full bg-[var(--fontes-yellow)] sm:h-[285px] sm:w-[285px] lg:h-[315px] lg:w-[315px]" />
+            <div className="absolute left-[10%] top-[7%] h-[58%] w-[68%] rounded-full bg-[var(--fontes-blue)]" />
+
+            <div className="absolute left-[0%] top-[10%] h-[72%] w-[70%] overflow-hidden bg-[var(--fontes-navy)] shadow-[0_28px_90px_rgba(15,45,91,0.12)]">
               <img
                 src={primaryImage}
                 alt=""
-                className="h-full w-full object-cover object-center"
+                className="fontes-image-breathe h-full w-full object-cover object-center"
               />
             </div>
 
-            <div className="absolute right-[0%] top-[9%] h-[235px] w-[235px] rounded-full bg-[var(--fontes-yellow)] sm:h-[275px] sm:w-[275px] lg:h-[300px] lg:w-[300px]" />
-
-            <div className="absolute bottom-[2%] right-[1%] h-[46%] w-[47%] overflow-hidden rounded-[2rem] border-[10px] border-[var(--fontes-off-white)] bg-[var(--fontes-blue)] shadow-[0_24px_80px_rgba(15,45,91,0.16)]">
+            <div className="absolute bottom-[0%] right-[0%] h-[43%] w-[46%] overflow-hidden border-[10px] border-[var(--fontes-off-white)] bg-[var(--fontes-blue)] shadow-[0_24px_80px_rgba(15,45,91,0.16)]">
               <img
                 src={secondaryImage}
                 alt=""
@@ -77,21 +80,19 @@ export function WhoWeAre() {
               <div className="absolute inset-0 bg-[var(--fontes-navy)]/12 mix-blend-multiply" />
             </div>
 
-            <div className="absolute left-[-2%] top-[57%] z-20 w-[70%]">
-              <svg viewBox="0 0 520 150" className="h-auto w-full" fill="none">
-                <path d="M0 82C84 14 131 132 224 65C310 2 371 115 520 34" stroke="var(--fontes-blue)" strokeWidth="7" strokeLinecap="round" />
-                <path d="M0 108C84 40 131 158 224 91C310 28 371 141 520 60" stroke="#74BCFF" strokeWidth="4" strokeLinecap="round" />
-                <path d="M0 132C84 64 131 182 224 115C310 52 371 165 520 84" stroke="var(--fontes-blue)" strokeOpacity="0.3" strokeWidth="3" strokeLinecap="round" />
-              </svg>
-            </div>
+            <img
+              src="/brand/pattern-medio.png"
+              alt=""
+              className="fontes-wave-drift absolute left-[-8%] top-[55%] z-20 w-[78%] opacity-95"
+            />
 
-            <div className="absolute right-[2%] top-[3%] z-20 text-right text-[10px] font-semibold uppercase leading-5 tracking-[0.27em] text-[var(--fontes-navy)]/48 sm:text-xs sm:leading-6">
+            <div className="absolute right-[1%] top-[3%] z-20 text-right text-[10px] font-semibold uppercase leading-5 tracking-[0.27em] text-[var(--fontes-navy)]/48 sm:text-xs sm:leading-6">
               Mais pessoas
               <br />
               mais horizontes
             </div>
 
-            <div className="absolute bottom-[6%] left-[7%] z-30 max-w-[280px] bg-white/94 px-5 py-4 backdrop-blur-sm">
+            <div className="absolute bottom-[8%] left-[5%] z-30 max-w-[300px] border-l-2 border-[var(--fontes-blue)] bg-white/94 px-5 py-4 backdrop-blur-sm">
               <p className="text-[10px] font-semibold uppercase leading-5 tracking-[0.26em] text-[var(--fontes-blue)] sm:text-xs">
                 Educação que abre caminhos
               </p>
