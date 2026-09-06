@@ -59,7 +59,7 @@ a {
 
 .fontes-route-dot {
   animation: fontes-route 8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-  will-change: transform;
+  will-change: left, opacity;
 }
 
 .fontes-line-flow {
@@ -110,10 +110,10 @@ a {
 }
 
 @keyframes fontes-route {
-  0%, 6% { transform: translateX(0); opacity: 0; }
-  12% { opacity: 1; }
-  88% { opacity: 1; }
-  94%, 100% { transform: translateX(calc(100vw - 22rem)); opacity: 0; }
+  0%, 6% { left: 0; opacity: 0; }
+  12% { left: 0; opacity: 1; }
+  88% { left: calc(100% - 12px); opacity: 1; }
+  94%, 100% { left: calc(100% - 12px); opacity: 0; }
 }
 
 @keyframes fontes-line-flow {
