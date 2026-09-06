@@ -16,11 +16,11 @@ export function SiteFooter() {
         <div className="grid gap-12 border-b border-[var(--fontes-navy)]/10 pb-12 lg:grid-cols-[1.1fr_0.72fr_0.82fr] lg:gap-16 lg:pb-16">
           <div>
             <Image
-              src="/brand/logo-horizontal.png"
+              src="/brand/logo-transparente.png"
               alt="Instituto Fontes"
-              width={220}
-              height={80}
-              className="h-auto w-[180px]"
+              width={180}
+              height={180}
+              className="h-[108px] w-[108px] object-contain"
             />
             <p className="mt-6 max-w-[440px] text-base leading-7 text-[var(--fontes-navy)]/64">
               Formação, desenvolvimento e oportunidades para crianças,
