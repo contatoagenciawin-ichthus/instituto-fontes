@@ -12,11 +12,11 @@ export function MotionSection() {
             muted
             loop
             playsInline
-            preload="none"
+            preload="metadata"
             aria-hidden="true"
           >
             <source
-              src="/media/instituto_fontes_hero_11s_final.mp4"
+              src="/media/instituto_fontes_secao_intermediaria_01.mp4"
               type="video/mp4"
             />
           </video>
@@ -27,25 +27,25 @@ export function MotionSection() {
             muted
             loop
             playsInline
-            preload="none"
+            preload="metadata"
             aria-hidden="true"
           >
             <source
-              src="/media/instituto_fontes_hero_mobile_11s_final.mp4"
+              src="/media/instituto_fontes_secao_mobile_01.mp4"
               type="video/mp4"
             />
           </video>
 
           <div
-            className="absolute inset-0 bg-[var(--fontes-blue)]/72 mix-blend-color"
+            className="absolute inset-0 bg-[var(--fontes-blue)]/52 mix-blend-color"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 bg-[var(--fontes-navy)]/48 mix-blend-multiply"
+            className="absolute inset-0 bg-[var(--fontes-navy)]/30 mix-blend-multiply"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 bg-gradient-to-t from-[var(--fontes-navy)]/80 via-[var(--fontes-navy)]/12 to-[var(--fontes-navy)]/16"
+            className="absolute inset-0 bg-gradient-to-t from-[var(--fontes-navy)]/82 via-[var(--fontes-navy)]/8 to-[var(--fontes-navy)]/12"
             aria-hidden="true"
           />
 
