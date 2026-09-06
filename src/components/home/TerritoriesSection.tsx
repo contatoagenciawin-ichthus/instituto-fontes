@@ -5,8 +5,7 @@ const territories = [
     description: "Habilidades hoje, mais oportunidades amanhã.",
     examples: ["Barbearia", "Manicure", "Cabeleireiro", "Maquiagem", "Moda", "Marketing digital", "Hardware"],
     image: "https://images.pexels.com/photos/3846554/pexels-photo-3846554.jpeg?auto=compress&cs=tinysrgb&w=1400",
-    layout: "lg:col-span-7",
-    treatment: "natural",
+    tone: "blue",
   },
   {
     number: "02",
@@ -14,8 +13,7 @@ const territories = [
     description: "Conhecimento que transforma realidades.",
     examples: ["Reforço escolar", "Leitura e escrita", "Inglês", "Fotografia", "Informática"],
     image: "https://images.pexels.com/photos/5211441/pexels-photo-5211441.jpeg?auto=compress&cs=tinysrgb&w=1400",
-    layout: "lg:col-span-5",
-    treatment: "duotone",
+    tone: "light",
   },
   {
     number: "03",
@@ -23,8 +21,7 @@ const territories = [
     description: "Expressão que conecta pessoas.",
     examples: ["Teatro", "Desenho", "Música", "Violão", "Teclado", "Ballet", "Jazz"],
     image: "https://images.pexels.com/photos/8382271/pexels-photo-8382271.jpeg?auto=compress&cs=tinysrgb&w=1400",
-    layout: "lg:col-span-4",
-    treatment: "natural",
+    tone: "yellow",
   },
   {
     number: "04",
@@ -32,8 +29,7 @@ const territories = [
     description: "Disciplina que impulsiona vidas.",
     examples: ["Jiu-jitsu", "Muay Thai", "Vôlei"],
     image: "https://images.pexels.com/photos/19180857/pexels-photo-19180857.jpeg?auto=compress&cs=tinysrgb&w=1400",
-    layout: "lg:col-span-4",
-    treatment: "duotone",
+    tone: "light",
   },
   {
     number: "05",
@@ -41,14 +37,21 @@ const territories = [
     description: "Valores que sustentam o futuro.",
     examples: ["Estudo bíblico", "Acompanhamento", "Convivência", "Desenvolvimento humano"],
     image: "https://images.pexels.com/photos/34623518/pexels-photo-34623518.jpeg?auto=compress&cs=tinysrgb&w=1400",
-    layout: "lg:col-span-4",
-    treatment: "natural",
+    tone: "yellow",
   },
 ] as const;
+
+const toneClasses = {
+  blue: "bg-[#EEF7FF]",
+  light: "bg-white",
+  yellow: "bg-[#FFF8E5]",
+} as const;
 
 export function TerritoriesSection() {
   return (
     <section id="territorios" className="relative overflow-hidden bg-white" aria-labelledby="territorios-title">
+      <div className="pointer-events-none absolute -right-24 top-20 h-64 w-64 rounded-full bg-[var(--fontes-yellow)]/18" aria-hidden="true" />
+
       <div className="mx-auto max-w-[1440px] px-6 py-24 sm:py-28 lg:px-10 lg:py-32 xl:px-14 xl:py-36">
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-16 xl:gap-24">
           <div>
@@ -72,68 +75,69 @@ export function TerritoriesSection() {
           </div>
         </div>
 
-        <div className="mt-14 grid gap-4 sm:mt-16 lg:grid-cols-12">
-          {territories.map((territory, index) => (
-            <article
-              key={territory.title}
-              className={`group relative min-h-[520px] overflow-hidden rounded-[2rem] bg-[var(--fontes-navy)] ${territory.layout}`}
-            >
-              <img
-                src={territory.image}
-                alt=""
-                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025] ${
-                  territory.treatment === "duotone" ? "grayscale contrast-[1.08]" : ""
-                }`}
-              />
+        <div className="relative mt-14 sm:mt-16 lg:mt-20">
+          <img
+            src="/brand/pattern-pequeno.png"
+            alt=""
+            className="fontes-wave-drift pointer-events-none absolute -top-14 right-[2%] z-20 hidden w-[300px] opacity-80 lg:block"
+            aria-hidden="true"
+          />
 
-              {territory.treatment === "duotone" ? (
-                <>
-                  <div className="absolute inset-0 bg-[var(--fontes-blue)] mix-blend-color" />
-                  <div className="absolute inset-0 bg-[var(--fontes-navy)]/24 mix-blend-multiply" />
-                </>
-              ) : (
-                <div className="absolute inset-0 bg-[var(--fontes-navy)]/10" />
-              )}
+          <div className="grid border-y border-[var(--fontes-navy)]/12 md:grid-cols-2 lg:grid-cols-5">
+            {territories.map((territory, index) => (
+              <article
+                key={territory.title}
+                className={`group relative flex min-h-[650px] flex-col overflow-hidden border-[var(--fontes-navy)]/10 ${toneClasses[territory.tone]} ${
+                  index > 0 ? "lg:border-l" : ""
+                } ${index % 2 === 1 ? "md:border-l lg:border-l" : ""}`}
+              >
+                <div className="relative z-10 flex flex-1 flex-col px-6 pb-7 pt-8 sm:px-7 lg:px-6 xl:px-7">
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="fontes-float flex h-16 w-16 items-center justify-center rounded-full bg-[#D9EEFF] text-sm font-bold tracking-[0.16em] text-[var(--fontes-navy)]">
+                      {territory.number}
+                    </div>
+                    <span className="h-[2px] w-8 bg-[var(--fontes-blue)]" aria-hidden="true" />
+                  </div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--fontes-navy)] via-[var(--fontes-navy)]/18 to-transparent" />
+                  <h3
+                    className="mt-7 text-[clamp(1.45rem,2vw,2rem)] font-bold leading-[1.02] tracking-[-0.045em] text-[var(--fontes-navy)]"
+                    style={{ fontFamily: "var(--font-sora)" }}
+                  >
+                    {territory.title}
+                  </h3>
 
-              <div className="absolute left-6 top-6 flex items-center gap-3 sm:left-8 sm:top-8">
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-xs font-semibold tracking-[0.18em] text-[var(--fontes-blue)]">
-                  {territory.number}
-                </span>
-                <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/76 sm:text-xs">
-                  Território Fontes
-                </span>
-              </div>
+                  <p className="mt-4 text-base leading-6 text-[var(--fontes-navy)]/68">
+                    {territory.description}
+                  </p>
 
-              {index === 0 ? (
-                <div className="absolute right-[-46px] top-[12%] h-40 w-40 rounded-full bg-[var(--fontes-yellow)] sm:h-48 sm:w-48" aria-hidden="true" />
-              ) : null}
-
-              {index === 2 ? (
-                <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full border-[16px] border-[var(--fontes-yellow)]/85" aria-hidden="true" />
-              ) : null}
-
-              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 lg:p-9">
-                <h3
-                  className="max-w-[620px] text-[clamp(2rem,3.6vw,4rem)] font-bold leading-[0.95] tracking-[-0.05em] text-white"
-                  style={{ fontFamily: "var(--font-sora)" }}
-                >
-                  {territory.title}
-                </h3>
-                <p className="mt-4 max-w-[500px] text-base leading-7 text-white/78 sm:text-lg">
-                  {territory.description}
-                </p>
-                <div className="mt-6 flex max-w-[760px] flex-wrap gap-x-4 gap-y-2 border-t border-white/22 pt-5">
-                  {territory.examples.map((example) => (
-                    <span key={example} className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/72 sm:text-[11px]">
-                      {example}
-                    </span>
-                  ))}
+                  <div className="mt-7 space-y-1.5 border-t border-[var(--fontes-navy)]/12 pt-5">
+                    {territory.examples.map((example) => (
+                      <p key={example} className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[var(--fontes-navy)]/70 sm:text-[11px]">
+                        {example}
+                      </p>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+
+                <div className="relative mt-auto h-[245px] overflow-hidden">
+                  <div className={`fontes-breathe absolute -bottom-20 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full ${index === 2 || index === 4 ? "bg-[var(--fontes-yellow)]" : "bg-[var(--fontes-blue)]"}`} aria-hidden="true" />
+                  <img
+                    src={territory.image}
+                    alt=""
+                    className={`relative z-10 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.035] ${
+                      index === 1 || index === 3 ? "grayscale contrast-[1.08]" : ""
+                    }`}
+                  />
+                  {index === 1 || index === 3 ? (
+                    <>
+                      <div className="absolute inset-0 z-20 bg-[var(--fontes-blue)] mix-blend-color" />
+                      <div className="absolute inset-0 z-20 bg-[var(--fontes-navy)]/10 mix-blend-multiply" />
+                    </>
+                  ) : null}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
 
         <div className="mt-8 flex items-center justify-between gap-8">
