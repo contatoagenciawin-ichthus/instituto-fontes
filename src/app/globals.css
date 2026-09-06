@@ -82,6 +82,25 @@ a {
   overflow: hidden;
 }
 
+.fontes-human-cutout {
+  clip-path: polygon(0 0, 88% 0, 100% 14%, 100% 82%, 82% 100%, 0 100%);
+}
+
+.fontes-human-cutout-secondary {
+  clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 16%);
+}
+
+.fontes-territory-photo {
+  clip-path: ellipse(78% 69% at 50% 78%);
+  margin-left: -8%;
+  margin-right: -8%;
+  width: 116%;
+}
+
+.fontes-mosaic-lead {
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 91% 100%, 0 100%);
+}
+
 .fontes-shimmer::after {
   content: "";
   position: absolute;
