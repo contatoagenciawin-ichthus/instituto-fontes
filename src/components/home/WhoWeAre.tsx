@@ -56,29 +56,35 @@ export function WhoWeAre() {
             </p>
           </div>
 
-          <div className="relative min-h-[460px] sm:min-h-[520px] lg:min-h-[560px]" aria-hidden="true">
-            <div className="absolute inset-y-0 right-0 w-[78%] overflow-hidden rounded-[2px] bg-[var(--fontes-navy)]">
-              <div className="absolute -left-[10%] top-[8%] h-[210px] w-[210px] rounded-full bg-[var(--fontes-blue)] sm:h-[260px] sm:w-[260px] lg:h-[300px] lg:w-[300px]" />
-              <div className="absolute right-[8%] top-[7%] h-[120px] w-[120px] rounded-full bg-[var(--fontes-yellow)] sm:h-[150px] sm:w-[150px] lg:h-[170px] lg:w-[170px]" />
+          <div
+            className="relative min-h-[440px] sm:min-h-[500px] lg:min-h-[540px]"
+            aria-hidden="true"
+          >
+            <div className="absolute right-[9%] top-[3%] h-[220px] w-[220px] rounded-full bg-[var(--fontes-blue)] sm:h-[270px] sm:w-[270px] lg:h-[310px] lg:w-[310px]" />
 
-              <div className="absolute bottom-[12%] left-[11%] max-w-[310px] text-white">
-                <p className="text-[clamp(2rem,3.2vw,3.8rem)] font-semibold leading-[0.98] tracking-[-0.045em]" style={{ fontFamily: "var(--font-sora)" }}>
-                  Formação,
-                  <br />
-                  desenvolvimento
-                  <br />
-                  <span className="text-[#74BCFF]">e oportunidades.</span>
-                </p>
-              </div>
+            <div className="absolute right-[-2%] top-[11%] h-[120px] w-[120px] rounded-full bg-[var(--fontes-yellow)] sm:h-[150px] sm:w-[150px] lg:h-[175px] lg:w-[175px]" />
 
-              <div className="absolute right-[7%] top-[42%] text-right text-[10px] font-semibold uppercase leading-5 tracking-[0.26em] text-white/66 sm:text-xs sm:leading-6">
-                Pessoas
+            <div className="absolute right-[24%] top-[22%] h-[230px] w-[230px] rounded-full border border-[var(--fontes-blue)]/18 sm:h-[285px] sm:w-[285px] lg:h-[330px] lg:w-[330px]" />
+
+            <div className="absolute bottom-[7%] right-[4%] h-[155px] w-[155px] rounded-full bg-[var(--fontes-gray)]/72 sm:h-[190px] sm:w-[190px] lg:h-[220px] lg:w-[220px]" />
+
+            <div className="absolute left-[2%] top-[17%] z-10 max-w-[390px]">
+              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.28em] text-[var(--fontes-blue)] sm:text-xs">
+                Pessoas em movimento
+              </p>
+              <p
+                className="text-[clamp(2rem,3.4vw,4.1rem)] font-semibold leading-[0.98] tracking-[-0.05em] text-[var(--fontes-navy)]"
+                style={{ fontFamily: "var(--font-sora)" }}
+              >
+                Formação,
                 <br />
-                em movimento
-              </div>
+                desenvolvimento
+                <br />
+                <span className="text-[var(--fontes-blue)]">e oportunidades.</span>
+              </p>
             </div>
 
-            <div className="absolute bottom-[13%] left-0 w-[58%] max-w-[360px] opacity-95">
+            <div className="absolute bottom-[15%] left-[-4%] z-20 w-[70%] max-w-[440px] opacity-90">
               <Image
                 src="/brand/pattern-medio.png"
                 alt=""
@@ -88,11 +94,15 @@ export function WhoWeAre() {
               />
             </div>
 
-            <div className="absolute left-[7%] top-[11%] h-[34%] w-[35%] border-l border-t border-[var(--fontes-blue)]/28" />
+            <div className="absolute right-[4%] top-[52%] z-20 text-right text-[10px] font-semibold uppercase leading-5 tracking-[0.27em] text-[var(--fontes-navy)]/58 sm:text-xs sm:leading-6">
+              Mais pessoas
+              <br />
+              mais horizontes
+            </div>
 
-            <div className="absolute bottom-[3%] right-[4%] flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--fontes-blue)] sm:text-xs">
+            <div className="absolute bottom-[1%] right-[4%] flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--fontes-blue)] sm:text-xs">
               <span className="h-[2px] w-8 bg-[var(--fontes-blue)]" />
-              Mais horizontes
+              Novos caminhos
             </div>
           </div>
         </div>
@@ -105,7 +115,10 @@ export function WhoWeAre() {
                   <span className="text-xs font-semibold tracking-[0.2em] text-[var(--fontes-blue)]">
                     0{index + 1}
                   </span>
-                  <span className="h-[2px] w-7 bg-[var(--fontes-blue)]" aria-hidden="true" />
+                  <span
+                    className="h-[2px] w-7 bg-[var(--fontes-blue)]"
+                    aria-hidden="true"
+                  />
                 </div>
                 <h3
                   className="text-2xl font-semibold tracking-[-0.035em] text-[var(--fontes-navy)] sm:text-[1.7rem]"
