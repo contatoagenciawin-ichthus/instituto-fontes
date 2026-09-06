@@ -15,7 +15,7 @@ export function HomeHero() {
         preload="metadata"
         aria-hidden="true"
       >
-        <source src="/media/desktop.mp4" type="video/mp4" />
+        <source src="/media/instituto_fontes_hero_11s_final.mp4" type="video/mp4" />
       </video>
 
       <video
@@ -27,7 +27,7 @@ export function HomeHero() {
         preload="metadata"
         aria-hidden="true"
       >
-        <source src="/media/mobile.mp4" type="video/mp4" />
+        <source src="/media/instituto_fontes_hero_mobile_11s_final.mp4" type="video/mp4" />
       </video>
 
       <div
