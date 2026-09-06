@@ -95,10 +95,10 @@ export function ImpactSection() {
         </div>
 
         <div className="mt-10 flex items-center justify-between gap-6 border-t border-[var(--fontes-navy)]/8 pt-6 sm:mt-12">
-          <p className="max-w-[620px] text-sm leading-6 text-[var(--fontes-black)]/48">
-            Os dados oficiais de impacto serão incorporados quando forem confirmados pelo Instituto.
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--fontes-navy)]/46">
+            Um percurso contínuo de formação, autonomia e futuro
           </p>
-          <span className="hidden h-[2px] w-16 bg-[var(--fontes-blue)] sm:block" aria-hidden="true" />
+          <span className="hidden h-[2px] flex-1 bg-[var(--fontes-blue)]/25 sm:block" aria-hidden="true" />
         </div>
       </div>
     </section>
