@@ -1,8 +1,8 @@
-const metrics = [
-  { value: "XX", label: "jovens atendidos" },
-  { value: "XX", label: "cursos ativos" },
-  { value: "XX", label: "voluntários" },
-  { value: "XX", label: "oportunidades geradas" },
+const movements = [
+  { action: "Aprender", label: "novas habilidades", offset: "0s" },
+  { action: "Desenvolver", label: "autonomia e repertório", offset: "-1.1s" },
+  { action: "Criar", label: "possibilidades de futuro", offset: "-2.2s" },
+  { action: "Avançar", label: "em direção a oportunidades", offset: "-3.3s" },
 ];
 
 export function ImpactSection() {
@@ -33,41 +33,60 @@ export function ImpactSection() {
 
           <div className="max-w-[650px] lg:pb-2">
             <p className="text-lg leading-8 text-[var(--fontes-black)]/68 sm:text-xl sm:leading-9">
-              Cada número representa uma trajetória que ganhou formação, repertório e novas possibilidades.
+              Cada etapa amplia repertório, fortalece escolhas e aproxima adolescentes e jovens de novas possibilidades.
             </p>
             <p className="mt-5 text-sm font-medium uppercase tracking-[0.18em] text-[var(--fontes-navy)]/42">
-              Dados em confirmação para publicação
+              Formação que se transforma em trajetória
             </p>
           </div>
         </div>
 
         <div className="mt-16 grid gap-6 sm:mt-20 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4 lg:gap-5 xl:gap-7">
-          {metrics.map((metric, index) => (
+          {movements.map((movement, index) => (
             <div
-              key={metric.label}
+              key={movement.action}
               className="group relative min-h-[280px] overflow-hidden border border-[var(--fontes-navy)]/8 bg-[var(--fontes-off-white)] px-6 py-7 sm:min-h-[310px] sm:px-7 sm:py-8 lg:min-h-[330px]"
             >
-              <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full border-[12px] border-[var(--fontes-blue)]/14 sm:h-52 sm:w-52" aria-hidden="true" />
-              <div className="absolute -right-2 top-4 h-32 w-32 rounded-full border-[8px] border-[var(--fontes-blue)]/8 sm:h-40 sm:w-40" aria-hidden="true" />
+              <svg
+                viewBox="0 0 220 220"
+                className="absolute -right-12 -top-12 h-52 w-52 rotate-[-34deg] sm:h-60 sm:w-60"
+                aria-hidden="true"
+              >
+                <circle cx="110" cy="110" r="82" fill="none" stroke="currentColor" strokeWidth="13" className="text-[var(--fontes-blue)]/8" />
+                <circle
+                  cx="110"
+                  cy="110"
+                  r="82"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="13"
+                  strokeLinecap="round"
+                  pathLength="100"
+                  className="fontes-impact-arc text-[var(--fontes-blue)]/38"
+                  style={{ animationDelay: movement.offset }}
+                />
+              </svg>
 
-              {index === 2 && (
-                <div className="absolute right-6 top-7 h-9 w-9 rounded-full bg-[var(--fontes-yellow)]" aria-hidden="true" />
-              )}
+              <div
+                className="fontes-impact-pulse absolute right-10 top-11 h-3 w-3 rounded-full bg-[var(--fontes-yellow)] shadow-[0_0_0_8px_rgba(255,183,3,0.13)]"
+                style={{ animationDelay: movement.offset }}
+                aria-hidden="true"
+              />
 
               <div className="relative z-10 flex h-full flex-col justify-between">
                 <div className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--fontes-blue)] sm:text-xs">
                   0{index + 1}
                 </div>
 
-                <div className="pt-16">
+                <div className="pt-20">
                   <div
-                    className="text-[clamp(4rem,6vw,6.8rem)] font-bold leading-none tracking-[-0.065em] text-[var(--fontes-navy)]"
+                    className="text-[clamp(2.1rem,3vw,3.35rem)] font-bold leading-[0.95] tracking-[-0.055em] text-[var(--fontes-navy)]"
                     style={{ fontFamily: "var(--font-sora)" }}
                   >
-                    {metric.value}
+                    {movement.action}
                   </div>
                   <p className="mt-4 max-w-[190px] text-lg font-medium leading-6 text-[var(--fontes-navy)] sm:text-xl sm:leading-7">
-                    {metric.label}
+                    {movement.label}
                   </p>
                 </div>
               </div>
@@ -77,7 +96,7 @@ export function ImpactSection() {
 
         <div className="mt-10 flex items-center justify-between gap-6 border-t border-[var(--fontes-navy)]/8 pt-6 sm:mt-12">
           <p className="max-w-[620px] text-sm leading-6 text-[var(--fontes-black)]/48">
-            Os valores acima são marcadores visuais e serão substituídos pelos dados oficiais confirmados pelo Instituto.
+            Os dados oficiais de impacto serão incorporados quando forem confirmados pelo Instituto.
           </p>
           <span className="hidden h-[2px] w-16 bg-[var(--fontes-blue)] sm:block" aria-hidden="true" />
         </div>
