@@ -1,3 +1,4 @@
+import { FeaturedTerritorySection } from "@/components/home/FeaturedTerritorySection";
 import { HomeHero } from "@/components/home/HomeHero";
 import { ImpactSection } from "@/components/home/ImpactSection";
 import { TerritoriesSection } from "@/components/home/TerritoriesSection";
@@ -12,6 +13,7 @@ export default function HomePage() {
       <WhoWeAre />
       <ImpactSection />
       <TerritoriesSection />
+      <FeaturedTerritorySection />
     </main>
   );
 }
