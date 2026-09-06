@@ -3,6 +3,7 @@ import { FoundersSection } from "@/components/home/FoundersSection";
 import { HomeHero } from "@/components/home/HomeHero";
 import { ImpactSection } from "@/components/home/ImpactSection";
 import { MotionSection } from "@/components/home/MotionSection";
+import { OpportunitiesSection } from "@/components/home/OpportunitiesSection";
 import { TerritoriesSection } from "@/components/home/TerritoriesSection";
 import { WhoWeAre } from "@/components/home/WhoWeAre";
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <FeaturedTerritorySection />
       <MotionSection />
       <FoundersSection />
+      <OpportunitiesSection />
     </main>
   );
 }
