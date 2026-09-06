@@ -33,7 +33,7 @@ export function ContributionSection() {
               className="text-[clamp(3rem,6vw,6.8rem)] font-bold leading-[0.92] tracking-[-0.055em] text-white"
               style={{ fontFamily: "var(--font-sora)" }}
             >
-              Ajude esses números a crescer.
+              Ajude novos caminhos a crescer.
             </h2>
 
             <p className="mt-8 max-w-[620px] text-lg leading-8 text-white/76 sm:text-xl sm:leading-9">
