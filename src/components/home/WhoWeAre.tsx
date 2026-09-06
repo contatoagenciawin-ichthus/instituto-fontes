@@ -22,9 +22,9 @@ export function WhoWeAre() {
       className="relative overflow-hidden bg-[var(--fontes-off-white)]"
       aria-labelledby="instituto-title"
     >
-      <div className="mx-auto max-w-[1440px] px-6 py-24 sm:py-28 lg:px-10 lg:py-32 xl:px-14 xl:py-36">
-        <div className="grid items-center gap-14 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16 xl:gap-24">
-          <div className="relative z-10 max-w-[660px]">
+      <div className="mx-auto max-w-[1440px] px-6 py-20 sm:py-24 lg:px-10 lg:py-28 xl:px-14 xl:py-32">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.98fr_1.02fr] lg:gap-20 xl:gap-28">
+          <div className="relative z-10 max-w-[650px]">
             <div className="mb-6 flex items-center gap-4">
               <span
                 className="h-[2px] w-10 bg-[var(--fontes-blue)] sm:w-12"
@@ -44,47 +44,40 @@ export function WhoWeAre() {
               <span className="text-[var(--fontes-blue)]">caminhos.</span>
             </h2>
 
-            <p className="mt-8 max-w-[610px] text-lg leading-8 text-[var(--fontes-black)]/74 sm:text-xl sm:leading-9">
+            <p className="mt-8 max-w-[600px] text-lg leading-8 text-[var(--fontes-black)]/74 sm:text-xl sm:leading-9">
               O Instituto Fontes oferece formação, desenvolvimento e oportunidades
               para crianças, adolescentes e jovens, com ações abertas à comunidade
               em projetos específicos.
             </p>
 
-            <p className="mt-6 max-w-[590px] text-base leading-8 text-black/58 sm:text-lg">
+            <p className="mt-6 max-w-[570px] text-base leading-8 text-black/58 sm:text-lg">
               Nosso foco principal está nos adolescentes e jovens, preparando
               caminhos reais para o futuro.
             </p>
           </div>
 
           <div
-            className="relative min-h-[440px] sm:min-h-[500px] lg:min-h-[540px]"
+            className="relative min-h-[390px] sm:min-h-[450px] lg:min-h-[500px]"
             aria-hidden="true"
           >
-            <div className="absolute right-[9%] top-[3%] h-[220px] w-[220px] rounded-full bg-[var(--fontes-blue)] sm:h-[270px] sm:w-[270px] lg:h-[310px] lg:w-[310px]" />
+            <div className="absolute right-[6%] top-[6%] h-[185px] w-[185px] rounded-full bg-[var(--fontes-blue)] sm:h-[225px] sm:w-[225px] lg:h-[255px] lg:w-[255px]" />
 
-            <div className="absolute right-[-2%] top-[11%] h-[120px] w-[120px] rounded-full bg-[var(--fontes-yellow)] sm:h-[150px] sm:w-[150px] lg:h-[175px] lg:w-[175px]" />
+            <div className="absolute right-[-1%] top-[14%] h-[92px] w-[92px] rounded-full bg-[var(--fontes-yellow)] sm:h-[115px] sm:w-[115px] lg:h-[132px] lg:w-[132px]" />
 
-            <div className="absolute right-[24%] top-[22%] h-[230px] w-[230px] rounded-full border border-[var(--fontes-blue)]/18 sm:h-[285px] sm:w-[285px] lg:h-[330px] lg:w-[330px]" />
+            <div className="absolute bottom-[8%] right-[12%] h-[120px] w-[120px] rounded-full bg-[var(--fontes-gray)]/62 sm:h-[145px] sm:w-[145px] lg:h-[165px] lg:w-[165px]" />
 
-            <div className="absolute bottom-[7%] right-[4%] h-[155px] w-[155px] rounded-full bg-[var(--fontes-gray)]/72 sm:h-[190px] sm:w-[190px] lg:h-[220px] lg:w-[220px]" />
-
-            <div className="absolute left-[2%] top-[17%] z-10 max-w-[390px]">
-              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.28em] text-[var(--fontes-blue)] sm:text-xs">
-                Pessoas em movimento
-              </p>
-              <p
-                className="text-[clamp(2rem,3.4vw,4.1rem)] font-semibold leading-[0.98] tracking-[-0.05em] text-[var(--fontes-navy)]"
-                style={{ fontFamily: "var(--font-sora)" }}
-              >
-                Formação,
+            <div className="absolute left-[2%] top-[23%] z-10 max-w-[285px] sm:max-w-[330px] lg:max-w-[350px]">
+              <p className="text-[10px] font-semibold uppercase leading-5 tracking-[0.28em] text-[var(--fontes-blue)] sm:text-xs sm:leading-6">
+                Formação
                 <br />
                 desenvolvimento
                 <br />
-                <span className="text-[var(--fontes-blue)]">e oportunidades.</span>
+                oportunidades
               </p>
+              <span className="mt-5 block h-[2px] w-8 bg-[var(--fontes-blue)]" />
             </div>
 
-            <div className="absolute bottom-[15%] left-[-4%] z-20 w-[70%] max-w-[440px] opacity-90">
+            <div className="absolute bottom-[18%] left-[-2%] z-20 w-[76%] max-w-[470px] opacity-90">
               <Image
                 src="/brand/pattern-medio.png"
                 alt=""
@@ -94,20 +87,20 @@ export function WhoWeAre() {
               />
             </div>
 
-            <div className="absolute right-[4%] top-[52%] z-20 text-right text-[10px] font-semibold uppercase leading-5 tracking-[0.27em] text-[var(--fontes-navy)]/58 sm:text-xs sm:leading-6">
+            <div className="absolute right-[2%] top-[58%] z-20 text-right text-[10px] font-semibold uppercase leading-5 tracking-[0.27em] text-[var(--fontes-navy)]/52 sm:text-xs sm:leading-6">
               Mais pessoas
               <br />
               mais horizontes
             </div>
 
-            <div className="absolute bottom-[1%] right-[4%] flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--fontes-blue)] sm:text-xs">
+            <div className="absolute bottom-[2%] right-[3%] flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--fontes-blue)] sm:text-xs">
               <span className="h-[2px] w-8 bg-[var(--fontes-blue)]" />
               Novos caminhos
             </div>
           </div>
         </div>
 
-        <div className="mt-16 border-t border-[var(--fontes-navy)]/10 pt-10 sm:mt-20 sm:pt-12 lg:mt-24 lg:pt-14">
+        <div className="mt-14 border-t border-[var(--fontes-navy)]/10 pt-10 sm:mt-18 sm:pt-12 lg:mt-20 lg:pt-14">
           <div className="grid gap-10 md:grid-cols-3 md:gap-8 lg:gap-12">
             {pillars.map((pillar, index) => (
               <div key={pillar.title} className="relative pr-4">
