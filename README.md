@@ -26,14 +26,19 @@ Assets oficiais só devem ser adicionados quando identificados e confirmados com
 - Base cromática: azul Fontes, off-white, navy discreto e amarelo pontual
 - Fotografia como protagonista
 
+A Home atual é o padrão visual consolidado da plataforma e deve ser preservada contra regressões durante a evolução técnica.
+
 ## Stack
 
 - Next.js 16 com App Router
 - React 19
 - TypeScript
 - Tailwind CSS 4
-- Vercel
-- Supabase como backend da plataforma para persistência, autenticação, storage e regras de acesso
+- Vercel para a experiência web
+- Cloudflare Workers para a camada operacional/API
+- Cloudflare D1 para persistência relacional
+- Cloudflare R2 para mídia e documentos
+- Cloudflare Images/Transformations para otimização e entrega de imagens
 
 ## Arquitetura prevista
 
@@ -41,62 +46,52 @@ Assets oficiais só devem ser adicionados quando identificados e confirmados com
 src/
 ├── app/
 │   ├── (site)/        # experiência institucional pública
-│   ├── (portal)/      # experiências autenticadas por vínculo
-│   ├── (admin)/       # operação interna, isolada do site público
-│   ├── api/           # integrações e endpoints quando necessários
+│   ├── (portal)/      # áreas autenticadas: aluno, empresa e apoiador
+│   ├── (admin)/       # operação interna
+│   ├── api/           # endpoints locais quando necessários
 │   ├── layout.tsx
 │   └── globals.css
 ├── components/
 │   ├── ui/
 │   ├── layout/
 │   └── sections/
-├── assets/
-│   └── brand/
 ├── lib/
-│   ├── supabase/
 │   ├── auth/
-│   ├── payments/
+│   ├── cloudflare/
+│   ├── policy/
 │   ├── validations/
 │   └── utils/
 ├── actions/
 └── types/
+
+cloudflare/
+├── worker/            # API e operações privilegiadas
+├── migrations/        # schema D1
+└── scripts/           # manutenção, exportação e tarefas técnicas
 ```
 
 As pastas serão criadas conforme forem necessárias. Não adicionar infraestrutura vazia ou dependências sem uso real.
-
-## Experiências autenticadas
-
-A plataforma terá uma identidade de acesso única. Um usuário poderá acumular diferentes vínculos com o Instituto, sem precisar manter contas separadas.
-
-Experiências previstas:
-
-- Área do Aluno;
-- Área da Empresa;
-- Área do Apoiador;
-- Área do Professor / Voluntário, em evolução posterior.
-
-`Mantenedor` será tratado como categoria/status de relacionamento, especialmente para apoiadores recorrentes, e não como um tipo isolado de conta.
-
-Empresas serão entidades próprias relacionadas aos usuários por memberships. Uma mesma empresa poderá participar do Programa de Oportunidades e também apoiar financeiramente o Instituto.
-
-A especificação detalhada está em `docs/platform-architecture-v1.1.md`.
 
 ## Princípios técnicos
 
 - usar Server Components por padrão;
 - adicionar `use client` somente quando interação no navegador exigir;
-- usar Server Actions para mutações ligadas à interface quando fizer sentido;
-- usar Route Handlers para integrações e endpoints externos;
-- manter site público, portal autenticado e área administrativa no mesmo projeto, mas com fronteiras claras;
-- usar uma única identidade de autenticação com vínculos e permissões acumuláveis;
-- manter pessoas, organizações, alunos, apoiadores e transações como conceitos relacionáveis, sem colapsar domínios distintos;
-- adotar RLS e menor privilégio desde a fundação da plataforma;
-- executar operações privilegiadas somente no servidor;
-- não armazenar dados sensíveis de cartão no banco do Instituto;
-- manter integrações de pagamento desacopladas do provedor;
-- não conectar o Supabase legado automaticamente;
-- não reconstruir funções antes de o requisito estar confirmado;
-- priorizar acessibilidade, SEO, performance, segurança e responsividade desde a base.
+- manter site público, portal autenticado e administração no mesmo produto, com fronteiras claras;
+- o navegador nunca acessa D1 diretamente;
+- operações privadas passam por autenticação e Policy Layer no servidor;
+- credenciais privilegiadas não são expostas ao cliente;
+- identidade única por usuário, permitindo múltiplos vínculos com o Instituto;
+- cursos e turmas são entidades distintas;
+- grade, inscrições, mídia, oportunidades e doações devem ser administráveis sem editar código;
+- imagens administrativas usam R2 com limites de quantidade/peso e publicação controlada;
+- presença será prevista no modelo desde a fundação, mesmo que a interface seja habilitada posteriormente;
+- priorizar LGPD, auditoria, acessibilidade, SEO, performance e responsividade desde a base;
+- documentar recuperação, backups e transferência de operação ao Instituto.
+
+## Documentação de arquitetura
+
+- `docs/platform-architecture-v1.1.md` — decisão de Área do Apoiador e identidade unificada;
+- `docs/platform-architecture-v1.2-cloudflare.md` — direção atual: Cloudflare, mídia, cursos, grade, inscrições e presença.
 
 ## Desenvolvimento
 
